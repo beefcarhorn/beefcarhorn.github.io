@@ -1,0 +1,30 @@
+* {
+    font-family: 'Raleway', sans-serif;
+
+    --main-color: rgb(20, 27, 49);
+    --main-color-active: rgb(8, 16, 40);
+    --bg-1: rgb(20, 27, 49);
+    --bg-2: rgb(30, 38, 65);
+    --white: white;
+    --white-active: rgb(147, 147, 147);
+    --me-bg: rgb(171, 110, 179);
+    --scrollbar: rgba(87, 102, 134, 0.4);
+    --scrollbar-hover: rgba(87, 102, 134, 0.6);
+    --scrollbar-track: rgb(46, 50, 85);
+  }
+
+  ::-webkit-scrollbar {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-hover);
+  }

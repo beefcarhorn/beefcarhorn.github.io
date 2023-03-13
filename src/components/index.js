@@ -1,0 +1,7 @@
+export { default as Contacts } from './contacts/contacts'
+export { default as Intro } from './intro/intro'
+export { default as Navbar } from './navbar/navbar'
+export { default as Portfolio } from './portfolio/portfolio'
+export { default as AboutMe } from './aboutMe/AboutMe'
+export { default as Works } from './works/works'
+export { default as Menu } from './menu/menu'
