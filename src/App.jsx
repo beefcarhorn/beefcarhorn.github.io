@@ -1,6 +1,6 @@
 import { useState } from "react"
 import './App.css'
-import { Contacts, Intro, Navbar, Portfolio, AboutMe, Works, Menu } from './components'
+import { Contacts, Intro, Navbar, Skills, Projects, AboutMe, Menu } from './components'
 
 function App() {
 
@@ -13,8 +13,8 @@ function App() {
       <div className="sections">
         <Intro />
         <AboutMe />
-        <Portfolio />
-        <Works />
+        <Skills />
+        <Projects />
         <Contacts />
       </div>
     </div>

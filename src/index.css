@@ -2,15 +2,15 @@
     font-family: 'Raleway', sans-serif;
 
     --main-color: rgb(20, 27, 49);
-    --main-color-active: rgb(8, 16, 40);
-    --bg-1: rgb(20, 27, 49);
+    --main-color-active: rgb(19, 24, 41);
+    --bg-1: rgb(26, 32, 54);
     --bg-2: rgb(30, 38, 65);
     --white: white;
     --white-active: rgb(147, 147, 147);
-    --me-bg: rgb(171, 110, 179);
-    --scrollbar: rgba(87, 102, 134, 0.4);
+    --accent-magenta: rgb(171, 110, 179);
+    --scrollbar: rgba(81, 104, 152, 0.4);
     --scrollbar-hover: rgba(87, 102, 134, 0.6);
-    --scrollbar-track: rgb(46, 50, 85);
+    --scrollbar-track: rgb(41, 58, 83);
   }
 
   ::-webkit-scrollbar {

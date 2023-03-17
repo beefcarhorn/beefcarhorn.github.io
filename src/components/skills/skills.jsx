@@ -1,32 +1,36 @@
 import React from 'react'
-import './portfolio.css'
+import './skills.css'
 
-function portfolio() {
+function skills() {
   return (
-    <div className='portfolio' id='portfolio'>
+    <div className='skills' id='skills'>
       <div className="header__container">
-        <h1 className='port__header'>Skills</h1>
+        <h1 className='skills__header'>Skills</h1>
       </div>
       <div className='skills__grid'>
         <div className='skills__container'>
           <img src="assets/react.svg" alt="" />
-          <li>1</li>
+          <h2>Web Development</h2>
+          <li>React, HTML, CSS, Node</li>
         </div>
         <div className='skills__container'>
           <img className='js' src="assets/js.png" alt="" />
-          <li>1</li>
+          <h2>JavaScript</h2>
+          <li>TypeScript, ES6, CommonJS</li>
         </div>
         <div className='skills__container'>
           <img src="assets/C.png" alt="" />
-          <li>1</li>
+          <h2>C</h2>
+          <li>Data Structures, Algorithms</li>
         </div>
         <div className='skills__container'>
           <img src="assets/py.png" alt="" />
-          <li>1</li>
+          <h2>Python</h2>
+          <li>Pandas, NumPy</li>
         </div>
       </div>
     </div>
   )
 }
 
-export default portfolio
+export default skills

@@ -1,4 +1,4 @@
-.portfolio {
+.skills {
     background-color: var(--bg-1);
     display: flex;
     flex-direction: column;
@@ -6,13 +6,13 @@
 }
 
 .header__container {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.port__header {
+.skills__header {
     color: white;
     width: 100%;
     text-align: center;
@@ -20,26 +20,44 @@
 }
 
 .skills__grid {
-    margin-top: 30px;
+    margin-top: 35px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    row-gap: 50px;
-    column-gap: 500px;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 400px;
+}
+
+.skills__container {
+    text-align: center;
+}
+
+.skills__container > h2 {
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 15px;
 }
 
 .skills__container > li {
+    margin-top: 5px;
     color: white;
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 300;
     list-style: none;
     text-align: center;
 }
 
 .skills__container > img {
-    width: 200px;
+    width: 150px;
 }
 
 .js {
     width: 50px;
+}
+
+@media (max-width: 1000px) {
+    .skills__grid {
+        column-gap: 150px;
+    }
 }
