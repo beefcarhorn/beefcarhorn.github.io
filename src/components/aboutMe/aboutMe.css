@@ -49,20 +49,38 @@
 }
 
 .hobby__desc {
+    position: relative;
+    width: 200px;
+    height: 300px;
     background-color: var(--accent-magenta);
-    border-radius: 15px;
-    padding: 10px;
+    border-radius: 10px;
+    transition: 300ms ease;
+}
+
+.hobby__desc:hover {
+    filter: brightness(75%);
 }
 
 .hobby__desc > h2 {
+    position: absolute;
+    top: 30px;
+    font-size: 2rem;
     color: var(--white);
     margin-bottom: 25px;
     font-weight: 500;
 }
 
 .hobby__desc > h4 {
+    position: absolute;
+    top: 90px;
+    margin: 0px 15px;
+    font-size: 1.25rem;
     color: var(--white);
     font-weight: 400;
+}
+
+.travel {
+    margin-top: 0px;
 }
 
 @media (max-width: 1000px) {

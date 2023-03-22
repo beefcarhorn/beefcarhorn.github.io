@@ -7,7 +7,7 @@ function AboutMe() {
       <h1 className='about__header'>About</h1>
       <div className='about__image__container'>
         <div className='about__image'>
-          <img className='code' src='./assets/programming.png' alt="" />
+          <img className='code' src='./assets/friends.png' alt="" />
         </div>
         <div className='about__image'>
           <img className='travel' src='./assets/travel.png' alt="" />
@@ -16,18 +16,18 @@ function AboutMe() {
           <img className='art' src='./assets/art.png' alt="" />
         </div>
       </div>
-      <div className='about__hobby'>
+      <div className='about__hobby free__time'>
         <div className="hobby__desc">
-          <h2>Programming</h2>
-          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque doloribus ullam consectetur corporis molestiae. Nobis quas molestiae accusantium architecto asperiores.</h4>
+          <h2>Free Time</h2>
+          <h4>When I'm not studying or participating in extracurriculars, I like to hang out with friends, play soccer, and build computers.</h4>
         </div>
-        <div className="hobby__desc">
+        <div className="hobby__desc travel">
           <h2 className='travel__header'>Travel</h2>
-          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit exercitationem neque, earum nostrum dolore dolorum nobis incidunt est vero? Magnam!</h4>
+          <h4>I've always had a passion for experiencing new places and cultures. My current favorite trip I've taken is to Amsterdam.</h4>
         </div>
-        <div className="hobby__desc">
+        <div className="hobby__desc art">
            <h2 className='art__header'>Art</h2>
-          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum iusto deserunt nostrum voluptas minima perferendis praesentium debitis saepe dolor?</h4>
+          <h4></h4>
         </div>
       </div>
     </div>
