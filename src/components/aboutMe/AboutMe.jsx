@@ -1,5 +1,6 @@
 import React from 'react'
 import './aboutMe.css'
+import Tilt from 'react-parallax-tilt'
 
 function AboutMe() {
   return (
@@ -17,18 +18,18 @@ function AboutMe() {
         </div>
       </div>
       <div className='about__hobby free__time'>
-        <div className="hobby__desc">
+        <Tilt className='hobby__desc' tiltAxis='y' tiltMaxAngleY={5} glareEnable={true} glareColor='#313b60' glarePosition='all' glareBorderRadius='100' glareMaxOpacity={0.7}>
           <h2>Free Time</h2>
           <h4>When I'm not studying or participating in extracurriculars, I like to hang out with friends, play soccer, and build computers.</h4>
-        </div>
-        <div className="hobby__desc travel">
+        </Tilt>
+        <Tilt className="hobby__desc travel" tiltAxis='y' tiltMaxAngleY={5} glareEnable={true} glareColor='#313b60' glarePosition='all' glareBorderRadius='100' glareMaxOpacity={0.7}>
           <h2 className='travel__header'>Travel</h2>
-          <h4>I've always had a passion for experiencing new places and cultures. My current favorite trip I've taken is to Amsterdam.</h4>
-        </div>
-        <div className="hobby__desc art">
+          <h4>I always love traveling when I get the chance. My favorite trips I've taken are to Amsterdam and to Toulouse.</h4>
+        </Tilt>
+        <Tilt className="hobby__desc art" tiltAxis='y' tiltMaxAngleY={5} glareEnable={true} glareColor='#313b60' glarePosition='all' glareBorderRadius='100' glareMaxOpacity={0.7}>
            <h2 className='art__header'>Art</h2>
-          <h4></h4>
-        </div>
+          <h4>hello</h4>
+        </Tilt>
       </div>
     </div>
   )

@@ -28,7 +28,7 @@
     width: 100px;
 }
 
-.about__image, .hobby__desc {
+.about__image {
     width: 200px;
     margin: 0px 100px;
     display: flex;
@@ -50,20 +50,20 @@
 
 .hobby__desc {
     position: relative;
+    display: flex;
     width: 200px;
-    height: 300px;
+    height: 400px;
+    margin: 0px 100px;
+    margin-bottom: 50px;
     background-color: var(--accent-magenta);
     border-radius: 10px;
-    transition: 300ms ease;
-}
-
-.hobby__desc:hover {
-    filter: brightness(75%);
+    transition: 500ms ease;
 }
 
 .hobby__desc > h2 {
     position: absolute;
     top: 30px;
+    left: 20px;
     font-size: 2rem;
     color: var(--white);
     margin-bottom: 25px;
@@ -71,20 +71,21 @@
 }
 
 .hobby__desc > h4 {
+    padding-right: 25px;
     position: absolute;
     top: 90px;
-    margin: 0px 15px;
+    left: 20px;
     font-size: 1.25rem;
     color: var(--white);
     font-weight: 400;
 }
 
-.travel {
-    margin-top: 0px;
-}
-
 @media (max-width: 1000px) {
     .about__image, .hobby__desc {
         margin: 0px 20px;
+    }
+
+    .hobby__desc {
+        margin-bottom: 50px;
     }
 }

@@ -4,6 +4,7 @@ import { Contacts, Intro, Navbar, Skills, Projects, AboutMe, Menu } from './comp
 
 function App() {
 
+  
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (

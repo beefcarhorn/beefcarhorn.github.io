@@ -18,7 +18,7 @@
     transform: translateX(-300px);
 }
 
-ul {
+.menu__list {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -28,15 +28,15 @@ ul {
     width: 60%;
 }
 
-li {
+.menu__list > li {
     margin-bottom: 25px;
 }
 
-li:hover {
+.menu__list > li:hover {
     font-weight: 500;
 }
 
-li > a {
+.menu__list > li > a {
     font-size: inherit;
     color: white;
     text-decoration: none;
