@@ -3,26 +3,26 @@ import './projects.css'
 import { countryArr } from './countryArray'
 import Tilt from 'react-parallax-tilt'
 
-var rand = Math.floor(Math.random() * countryArr.length); // init
-var img = countryArr[rand]
+var img = countryArr[Math.floor(Math.random() * countryArr.length)]
+const countryProps = { img: img }
 
 const updateCountry = () => {
-  rand = Math.floor(Math.random() * countryArr.length)
-  img = countryArr[rand]
+  while ((img = countryArr[Math.floor(Math.random() * countryArr.length)]) !== countryProps.img)
+  countryProps.img = img
 }
 
 const Projects = () => {
   const [input, setInput] =  useState()
-  const [country, setCountry] = useState(`assets/countries/${img}`)
+  const [country, setCountry] = useState(`assets/countries/${countryProps.img}`)
+  const [anim, setAnim] = useState(false)
 
-  const handleChange = (event) => {
-    setInput(event.target.value)
-  }
+  const handleChange = (event) => { setInput(event.target.value) }
+  const animate = () => { setAnim(true) }
 
   const keyDownHandler = (event) => {
-    if (event.key === 'Enter' && `${input}.png`.toLowerCase() === img.toLowerCase()) {
+    if (event.key === 'Enter' && `${input}.png`.toLowerCase() === countryProps.img.toLowerCase()) {
       updateCountry()
-      setCountry(`assets/countries/${img}`)
+      setCountry(`assets/countries/${countryProps.img}`)
       setInput('')
     }
   }
@@ -33,7 +33,7 @@ const Projects = () => {
       <Tilt className='projects__country' tiltAxis='y' tiltMaxAngleY={1} glareEnable={true} glareColor='#313b60' glarePosition='all' glareBorderRadius='100' glareMaxOpacity={0.2}>
         <div className='country__desc'>
           <h2 className='country__header'>CountryGuessr</h2>
-          <h4 className='country__howto'>A game where you guess the name of a random country or territory!</h4>
+          <h4 className='country__howto'>Guess the name of a random country or territory!</h4>
           <div className='country__specs'>
             <img className='country__js' src='assets/js.png' alt='JavaScript'></img>
             <img className='html' src='assets/html.ico' alt='HTML'></img>
@@ -43,6 +43,7 @@ const Projects = () => {
         <div className='answer__container'>
           <img src={country} alt='Country'></img>
           <input className='answer__input' type="text" value={input} placeholder='Enter Guess' onChange={handleChange} onKeyDown={keyDownHandler} />
+          <button className={`answer__skip ${ anim ? 'anim' : null }`} onClick={animate}>Skip</button>
         </div>
       </Tilt>
     </div>

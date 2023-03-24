@@ -8,6 +8,7 @@
     --bg-3: rgb(49, 58, 94);
     --white: white;
     --faded-white: rgba(255, 255, 255, 0.05);
+    --faded-white-hover: rgba(255, 255, 255, 0.15);
     --white-active: rgb(147, 147, 147);
     --accent-magenta: rgb(171, 110, 179);
     --scrollbar: rgba(81, 104, 152, 0.4);
