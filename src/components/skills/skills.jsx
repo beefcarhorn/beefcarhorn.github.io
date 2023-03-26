@@ -26,7 +26,7 @@ function skills() {
         <div className='skills__container'>
           <img src="assets/py.png" alt="" />
           <h2>Python</h2>
-          <li>Pandas, NumPy</li>
+          <li>Pygame, Pandas, NumPy</li>
         </div>
       </div>
     </div>

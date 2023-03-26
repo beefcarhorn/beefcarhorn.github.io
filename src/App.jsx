@@ -1,6 +1,6 @@
 import { useState } from "react"
 import './App.css'
-import { Contacts, Intro, Navbar, Skills, Projects, AboutMe, Menu } from './components'
+import { Navbar, Menu, Intro, AboutMe, Skills, Projects, Organizations, Contact, } from './components'
 
 function App() {
 
@@ -16,7 +16,8 @@ function App() {
         <AboutMe />
         <Skills />
         <Projects />
-        <Contacts />
+        <Organizations />
+        <Contact />
       </div>
     </div>
   );

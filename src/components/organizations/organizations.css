@@ -1,0 +1,59 @@
+.organizations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-1);
+    color: var(--white);
+    text-align: center;
+}
+
+.organizations__header {
+    font-size: 4rem;
+    padding: 40px 0px;
+}
+
+.ieee {
+    width: 90vw;
+    max-width: 950px;
+    margin-bottom: 40px;
+}
+
+.ieee__logo {
+    width: 300px;
+    filter: brightness(80%);
+    transition: 100ms ease-out;
+    margin-bottom: 20px;
+}
+
+.ieee > h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.ieee > li {
+    list-style: none;
+}
+
+.ieee > li > h2 {
+    font-weight: 500;
+    margin: 20px 0px 10px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ieee > li > h3 {
+    font-weight: 400;
+}
+
+.ieee__logo:hover, .ecess__logo:hover {
+    filter: brightness(100%);
+}
+
+.ecess__logo {
+    width: 350px;
+    filter: brightness(80%);
+    transition: 100ms ease-out;
+    margin-bottom: 20px;
+}
+

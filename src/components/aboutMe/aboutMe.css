@@ -14,6 +14,10 @@
 .about__image__container {
     display: flex;
     align-items: center;
+    padding-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--bg-3);
 }
 
 .code {
@@ -35,9 +39,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 500ms ease;
 }
 
-.about__image> img {
+.about__image > img {
     filter: invert();
 }
 
@@ -45,17 +50,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 0px;
+    margin-bottom: 60px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--bg-3);
 }
 
 .hobby__desc {
     position: relative;
     display: flex;
     width: 200px;
-    height: 400px;
+    height: 340px;
     margin: 0px 100px;
     margin-bottom: 50px;
-    background-color: var(--accent-magenta);
+    background-color: transparent;
+    border: 3px solid var(--white);
     border-radius: 10px;
     transition: 500ms ease;
 }
@@ -80,12 +90,47 @@
     font-weight: 400;
 }
 
-@media (max-width: 1000px) {
-    .about__image, .hobby__desc {
-        margin: 0px 20px;
-    }
+.width__710px {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: var(--bg-3);
+}
 
-    .hobby__desc {
-        margin-bottom: 50px;
-    }
+.width__710px > h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.width__710px > img {
+    filter: invert();
+}
+
+.travel__image__710px, .art__image__710px {
+    margin-bottom: 30px;
+}
+
+.width__710px > h4 {
+    width: 150px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: var(--white);
+}
+
+@media (max-width: 1000px) {
+    .about__image, .hobby__desc { margin: 0px 20px; }
+    .hobby__desc { margin-bottom: 50px; }
+}
+
+@media (max-width: 710px) {
+    .about__image__container, .about__hobby { flex-direction: column; }
 }

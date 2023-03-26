@@ -9,7 +9,7 @@
     font-size: 4rem;
     color: var(--white);
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 .projects__country {
@@ -18,7 +18,7 @@
     max-width: 1000px;
     display: grid;
     grid-template-rows: 1fr 3fr;
-    margin-top: 50px;
+    margin: 50px 0px 60px;
     padding: 35px;
     border: 3px solid var(--white);
 }
@@ -116,11 +116,17 @@
 }
 
 .answer__skip:hover {
-    box-shadow: inset 100px 0px 0px 0px var(--faded-white-hover);
+    background-color: var(--faded-white-hover);
 }
 
-.anim {
-    background-color: red;
+.down__anim {
+    transform: scale(0.9);
+    transition: 0ms;
+}
+
+.up__anim {
+    transform: scale(1);
+    transition: 0ms;
 }
 
 @media (max-width: 1000px) {

@@ -14,10 +14,16 @@ const updateCountry = () => {
 const Projects = () => {
   const [input, setInput] =  useState()
   const [country, setCountry] = useState(`assets/countries/${countryProps.img}`)
-  const [anim, setAnim] = useState(false)
+  const [downAnim, setDownAnim] = useState(false)
+  const [upAnim, setUpAnim] = useState(false)
 
   const handleChange = (event) => { setInput(event.target.value) }
-  const animate = () => { setAnim(true) }
+  const animate = (event) => { event === 'mouseDown' ? setDownAnim(!downAnim) : setUpAnim(!upAnim) }
+  const skipCountry = () => {
+    updateCountry()
+    setCountry(`assets/countries/${countryProps.img}`)
+    setInput('')
+  }
 
   const keyDownHandler = (event) => {
     if (event.key === 'Enter' && `${input}.png`.toLowerCase() === countryProps.img.toLowerCase()) {
@@ -43,7 +49,12 @@ const Projects = () => {
         <div className='answer__container'>
           <img src={country} alt='Country'></img>
           <input className='answer__input' type="text" value={input} placeholder='Enter Guess' onChange={handleChange} onKeyDown={keyDownHandler} />
-          <button className={`answer__skip ${ anim ? 'anim' : null }`} onClick={animate}>Skip</button>
+          <button className={`answer__skip ${ downAnim ? 'down__anim' : null } 
+                                           ${ upAnim ? 'up__anim' : null }`} 
+                                           onClick={skipCountry} 
+                                           onMouseDown={() => { animate('mouseDown'); setUpAnim(false) }} 
+                                           onMouseUp={() => { animate('mouseUp'); setDownAnim(false) }} 
+                                           onMouseLeave={() => setDownAnim(false)}>Skip</button>
         </div>
       </Tilt>
     </div>

@@ -1,38 +1,39 @@
 * {
-    font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
 
-    --main-color: rgb(20, 27, 49);
-    --main-color-active: rgb(19, 24, 41);
-    --bg-1: rgb(26, 32, 54);
-    --bg-2: rgb(30, 38, 65);
-    --bg-3: rgb(49, 58, 94);
-    --white: white;
-    --faded-white: rgba(255, 255, 255, 0.05);
-    --faded-white-hover: rgba(255, 255, 255, 0.15);
-    --white-active: rgb(147, 147, 147);
-    --accent-magenta: rgb(171, 110, 179);
-    --scrollbar: rgba(81, 104, 152, 0.4);
-    --scrollbar-hover: rgba(87, 102, 134, 0.6);
-    --scrollbar-track: rgb(41, 58, 83);
-  }
+  --main-color: rgb(20, 27, 49);
+  --main-color-active: rgb(19, 24, 41);
+  --bg-1: rgb(26, 32, 54);
+  --bg-2: rgb(30, 38, 65);
+  --bg-3: rgb(49, 58, 94);
+  --white: white;
+  --faded-white: rgba(255, 255, 255, 0.05);
+  --faded-white-hover: rgba(255, 255, 255, 0.15);
+  --faded-white-2: rgba(255, 255, 255, 0.25);
+  --white-active: rgb(147, 147, 147);
+  --accent-magenta: rgb(171, 110, 179);
+  --scrollbar: rgba(81, 104, 152, 0.4);
+  --scrollbar-hover: rgba(87, 102, 134, 0.6);
+  --scrollbar-track: rgb(41, 58, 83);
+}
 
-  ::-webkit-scrollbar {
-    background-color: transparent;
-  }
+::-webkit-scrollbar {
+  background-color: transparent;
+}
 
-  ::-webkit-scrollbar-track {
-    background-color: var(--scrollbar-track);
-  }
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
 
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar);
-  }
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar);
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--scrollbar-hover);
-  }
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-hover);
+}
 
-  ::placeholder {
-    color: var(--white);
-    opacity: 0.75;
-  }
+::placeholder {
+  color: var(--white);
+  opacity: 0.75;
+}

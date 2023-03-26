@@ -28,6 +28,7 @@
 .logo__desc {
     font-size: 2em;
     font-weight: 300;
+    width: 300px
 }
 
 .hamburger {

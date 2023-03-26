@@ -19,7 +19,3 @@
   scroll-behavior: smooth;
   scrollbar-width: none; /* firefox */
 }
-
-.sections > * {
-  width: 100vw;
-}
