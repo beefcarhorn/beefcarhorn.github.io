@@ -13,10 +13,20 @@
     padding: 40px 0px;
 }
 
-.ieee {
-    width: 90vw;
+.organizations__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    width: 80vw;
     max-width: 950px;
+}
+
+.ieee, .ecess {
+    width: 420px;
     margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--bg-4);
 }
 
 .ieee__logo {
@@ -26,7 +36,7 @@
     margin-bottom: 20px;
 }
 
-.ieee > h3 {
+.ieee > h3, .ecess > h3 {
     font-size: 1.2rem;
     font-weight: 400;
 }
@@ -35,14 +45,14 @@
     list-style: none;
 }
 
-.ieee > li > h2 {
+.ieee > li > h2, .ecess > h2 {
     font-weight: 500;
     margin: 20px 0px 10px;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-.ieee > li > h3 {
+.ieee > li > h3, .ecess > h3 {
     font-weight: 400;
 }
 
@@ -52,8 +62,8 @@
 
 .ecess__logo {
     width: 350px;
-    filter: brightness(80%);
+    filter: brightness(70%);
     transition: 100ms ease-out;
-    margin-bottom: 20px;
+    margin: 10px 0px 39px;
 }
 

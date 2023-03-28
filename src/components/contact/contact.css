@@ -1,3 +1,142 @@
 .contact {
-    background-color: var(--bg-1);
+    background-color: var(--bg-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.contact__header {
+    font-size: 4rem;
+    padding: 40px 0px;
+}
+
+.message__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    max-width: 650px;
+    margin-bottom: 80px;
+    border-radius: 10px;
+    background-color: var(--bg-3);
+}
+
+.message__header {
+    padding: var(--contact-padding);
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--bg-5);
+}
+
+.message__header > h3 {
+    font-weight: 500;
+}
+
+.divider {
+    width: 70vw;
+    max-width: 605px;
+    height: 1px;
+    margin: auto;
+    background-color: var(--bg-5);
+}
+
+.message__recipient {
+    display: flex;
+    align-items: center;
+    padding: var(--contact-padding);
+}
+
+.message__recipient > h3 {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.message__recipient__email {
+    padding: 5px 10px;
+    border: 1.5px solid var(--faded-white-2);
+    border-radius: 15px;
+    transition: 100ms ease;
+}
+
+.message__recipient__email:hover {
+    background-color: var(--bg-6);
+    border: 1.5px solid var(--faded-white-3);
+}
+
+.message__author {
+    display: flex;
+    align-items: center;
+    padding: var(--contact-padding);
+}
+
+.message__author > h3 {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.message__author > input {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    color: var(--white);
+}
+
+.message__subject {
+    display: flex;
+    align-items: center;
+    padding: var(--contact-padding);
+}
+
+.message__subject > input {
+    margin-left: -2.5px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    color: var(--white);
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    padding: var(--contact-padding);
+}
+
+.message > textarea {
+    width: 100%;
+    height: 300px;
+    font-size: 1.2rem;
+    margin-left: -2.5px;
+    margin-bottom: 10px;
+    resize: none;
+    border: none;
+    outline: none;
+    color: var(--white);
+    background-color: transparent;
+}
+
+.message__actions {
+    display: flex;
+    align-items: center;
+    padding: var(--contact-padding);
+}
+
+.message__actions > button {
+    width: 100px;
+    height: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    color: var(--white);
+    background-color: var(--accent-magenta);
+    transition: 100ms ease;
+}
+
+.message__actions > button:hover {
+    filter: brightness(105%);
+    box-shadow: 0px 0px 3px var(--accent-magenta);
 }
