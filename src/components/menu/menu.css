@@ -36,7 +36,7 @@
     font-size: inherit;
     color: white;
     text-decoration: none;
-    transition: 25ms ease;
+    transition: 75ms ease;
 }
 
 .menu__list > li > a:hover {

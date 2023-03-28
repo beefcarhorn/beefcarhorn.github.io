@@ -14,6 +14,7 @@
   --faded-white-hover: rgba(255, 255, 255, 0.15);
   --faded-white-2: rgba(255, 255, 255, 0.25);
   --faded-white-3: rgba(255, 255, 255, 0.6);
+  --faded-black: rgba(0, 0, 0, 0.6);
   --white-active: rgb(147, 147, 147);
   --accent-magenta: rgb(171, 110, 179);
   --scrollbar: rgba(81, 104, 152, 0.4);

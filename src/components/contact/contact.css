@@ -1,3 +1,5 @@
+*, *::before *::after { box-sizing: border-box; }
+
 .contact {
     background-color: var(--bg-2);
     display: flex;
@@ -76,6 +78,7 @@
 }
 
 .message__author > input {
+    width: 100%;
     background-color: transparent;
     border: none;
     font-size: 1.2rem;
@@ -90,10 +93,12 @@
 }
 
 .message__subject > input {
+    width: 100%;
     margin-left: -2.5px;
     background-color: transparent;
     border: none;
     font-size: 1.2rem;
+    resize: none;
     outline: none;
     color: var(--white);
 }
@@ -129,6 +134,7 @@
     font-size: 1.1rem;
     font-weight: 500;
     border: none;
+    outline: none;
     border-radius: 20px;
     margin-bottom: 10px;
     color: var(--white);
@@ -140,3 +146,82 @@
     filter: brightness(105%);
     box-shadow: 0px 0px 3px var(--accent-magenta);
 }
+
+.contact__modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    width: 80vw;
+    height: 600px;
+    padding: 20px;
+    border-radius: 30px;
+    outline: none;
+    background-color: var(--bg-1);
+}
+
+.contact__modal > button {
+    position: absolute;
+    padding: 0;
+    top: -5px;
+    right: 20px;
+    height: 0px;
+    font-size: 4rem;
+    color: var(--white);
+    border: none;
+    background-color: transparent;
+    transition: 200ms ease;
+}
+
+.contact__modal > button:hover {
+    color: var(--accent-magenta);
+    scale: 1.1;
+    transform: translateY(-3px);
+}
+
+.ReactModal__Overlay {
+    background-color: var(--faded-black) !important;
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
+
+.animation__container {
+    display: flex;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translate(25%, -50%);
+    width: 300px;
+}
+
+.checkmark__cover {
+    position: absolute;
+    top: 25%;
+    right: 50%;
+    transform: translate(25%, -50%);
+    transform: scale(0);
+    width: 350px;
+    height: 300px;
+    background-color: var(--white);
+    transition: 1s all;
+    animation: Checkmark 1.5s;
+}
+
+@keyframes Checkmark {
+    0% { transform: scale(1); width: 300px; }
+    20% { transform: scale(1); width: 200px; }
+    100% { transform: scale(1); width: 0px; }
+}
+

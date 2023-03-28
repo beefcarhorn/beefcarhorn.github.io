@@ -7,7 +7,7 @@ function Contact() {
   const [openModal, setOpenModal] = useState(false)
   const handleSubmit = (e) => { 
     e.preventDefault()
-    setOpenModal(true)
+    setOpenModal(!openModal)
    }
 
   return (
@@ -38,7 +38,15 @@ function Contact() {
           <button onClick={handleSubmit}>Send</button>
         </div>
       </div>
-      <Modal className={} isOpen={openModal} ></Modal>
+      <div className="contact__modal__container">
+        <Modal className='contact__modal' isOpen={openModal} closeTimeoutMS={200}>
+          <button onClick={handleSubmit}>×</button>
+          <div className="animation__container">
+            <img className='checkmark' src="assets/checkmark.svg" alt="Checkmark" />
+          </div>
+            <div className="checkmark__cover"></div>
+        </Modal>
+      </div>
     </div>
   )
 }
