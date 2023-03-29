@@ -17,7 +17,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
-    width: 80vw;
     max-width: 950px;
 }
 
@@ -67,3 +66,28 @@
     margin: 10px 0px 39px;
 }
 
+@media (max-width: 865px) {
+    .organizations__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .organizations__header {
+        font-size: 3rem;
+    }
+
+    .ieee, .ecess {
+        width: 80vw;
+    }
+
+    .ieee__logo {
+        width: 235px;
+    }
+
+    .ecess__logo {
+        width: 235px;
+        margin-bottom: 25px;
+    }
+}

@@ -29,7 +29,7 @@ const Organizations = () => {
             <img className='ecess__logo' src="assets/ecess.png" alt="ECESS" />
           </a>
           <h3>The Electrical and Computer Engineering Student Society helps bring students together who have like-minded interests and goals.
-              Since August 2022, I have been on the ECESS Web Development team  
+              Since August 2022, I have been on the ECESS Web Development team.  
           </h3>
           <h2>Web Development Team</h2>
           <h3>Since I have joined the Web Development team, the ECESS website has not been updated since 2021.

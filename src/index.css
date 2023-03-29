@@ -1,5 +1,6 @@
 * {
   font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
 
   --main-color: rgb(20, 27, 49);
   --main-color-active: rgb(19, 24, 41);
@@ -20,8 +21,14 @@
   --scrollbar: rgba(81, 104, 152, 0.4);
   --scrollbar-hover: rgba(87, 102, 134, 0.6);
   --scrollbar-track: rgb(41, 58, 83);
+  --gradient-1: linear-gradient(45deg, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
 
-  --contact-padding: 10px 20px;
+  --contact-padding: 15px 20px;
+  --bg-skew-angle: -5deg;
+}
+
+body {
+  background-color: var(--bg-1);
 }
 
 ::-webkit-scrollbar {
@@ -43,4 +50,18 @@
 ::placeholder {
   color: var(--white);
   opacity: 0.75;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--white);
+  -webkit-box-shadow: 0px 0px 0px 100px var(--bg-6) inset;
+  transition: background-color 500ms ease-in-out 0s;
 }

@@ -1,5 +1,4 @@
 import { Typewriter } from 'react-simple-typewriter';
-import { MdKeyboardArrowDown } from 'react-icons/md'
 import './intro.css'
 
 function Intro() {
@@ -23,10 +22,6 @@ function Intro() {
             </span>
           </h3>
         </div>
-        <a className='intro__a' href="#AboutMe">
-          <p className='to__about'>About Me</p>
-          <MdKeyboardArrowDown className='down__arrow' />
-        </a>
       </div>
     </div>
   )

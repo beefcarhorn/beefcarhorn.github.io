@@ -1,6 +1,6 @@
 import { useState } from "react"
 import './App.css'
-import { Navbar, Menu, Intro, AboutMe, Skills, Projects, Organizations, Contact, } from './components'
+import { Navbar, Menu, Intro, AboutMe, Skills, Projects, Organizations, Contact } from './components'
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="sections">
         <Intro />
-        <AboutMe />
+        <AboutMe className='diagonal' />
         <Skills />
         <Projects />
         <Organizations />

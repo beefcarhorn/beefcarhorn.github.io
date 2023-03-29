@@ -1,5 +1,3 @@
-*, *::before *::after { box-sizing: border-box; }
-
 .contact {
     background-color: var(--bg-2);
     display: flex;
@@ -31,8 +29,49 @@
     background-color: var(--bg-5);
 }
 
-.message__header > h3 {
+.message__container > h3 {
     font-weight: 500;
+    padding: var(--contact-padding);
+}
+
+.message__container > input {
+    margin: 10px 18px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background-color: var(--bg-3);
+    color: var(--white);
+}
+
+.message__container > textarea {
+    height: 300px;
+    margin: 10px 18px;
+    font-size: 1.2rem;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: var(--bg-3);
+    color: var(--white);
+}
+
+.message__container > button {
+    width: 100px;
+    height: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin: 15px;
+    color: var(--white);
+    background-color: var(--accent-magenta);
+    transition: 100ms ease;
+}
+
+.message__container > button:hover {
+    filter: brightness(105%);
+    box-shadow: 0px 0px 3px var(--accent-magenta);
 }
 
 .divider {
@@ -41,40 +80,6 @@
     height: 1px;
     margin: auto;
     background-color: var(--bg-5);
-}
-
-.message__recipient {
-    display: flex;
-    align-items: center;
-    padding: var(--contact-padding);
-}
-
-.message__recipient > h3 {
-    font-weight: 500;
-    margin-right: 10px;
-}
-
-.message__recipient__email {
-    padding: 5px 10px;
-    border: 1.5px solid var(--faded-white-2);
-    border-radius: 15px;
-    transition: 100ms ease;
-}
-
-.message__recipient__email:hover {
-    background-color: var(--bg-6);
-    border: 1.5px solid var(--faded-white-3);
-}
-
-.message__author {
-    display: flex;
-    align-items: center;
-    padding: var(--contact-padding);
-}
-
-.message__author > h3 {
-    font-weight: 500;
-    margin-right: 10px;
 }
 
 .message__author > input {
@@ -86,73 +91,18 @@
     color: var(--white);
 }
 
-.message__subject {
-    display: flex;
-    align-items: center;
-    padding: var(--contact-padding);
-}
-
-.message__subject > input {
-    width: 100%;
-    margin-left: -2.5px;
-    background-color: transparent;
-    border: none;
-    font-size: 1.2rem;
-    resize: none;
-    outline: none;
-    color: var(--white);
-}
-
-.message {
-    display: flex;
-    align-items: center;
-    padding: var(--contact-padding);
-}
-
-.message > textarea {
-    width: 100%;
-    height: 300px;
-    font-size: 1.2rem;
-    margin-left: -2.5px;
-    margin-bottom: 10px;
-    resize: none;
-    border: none;
-    outline: none;
-    color: var(--white);
-    background-color: transparent;
-}
-
 .message__actions {
     display: flex;
     align-items: center;
     padding: var(--contact-padding);
 }
 
-.message__actions > button {
-    width: 100px;
-    height: 40px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    color: var(--white);
-    background-color: var(--accent-magenta);
-    transition: 100ms ease;
-}
-
-.message__actions > button:hover {
-    filter: brightness(105%);
-    box-shadow: 0px 0px 3px var(--accent-magenta);
-}
-
-.contact__modal{
+.contact__modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 800px;
+    max-width: 400px;
     width: 80vw;
     height: 600px;
     padding: 20px;
@@ -172,6 +122,7 @@
     border: none;
     background-color: transparent;
     transition: 200ms ease;
+    z-index: 4;
 }
 
 .contact__modal > button:hover {
@@ -181,6 +132,8 @@
 }
 
 .ReactModal__Overlay {
+    width: 100%;
+    height: 100%;
     background-color: var(--faded-black) !important;
     z-index: 4;
     opacity: 0;
@@ -195,33 +148,102 @@
     opacity: 0;
 }
 
-.animation__container {
-    display: flex;
-}
-
 .checkmark {
     position: absolute;
-    top: 50%;
-    transform: translate(25%, -50%);
+    top: 30%;
+    right: 50%;
+    transform: translate(50%, -50%);
     width: 300px;
 }
 
 .checkmark__cover {
     position: absolute;
-    top: 25%;
-    right: 50%;
-    transform: translate(25%, -50%);
+    top: 0%;
+    right: 13%;
+    transform: translate(50%, 50%);
     transform: scale(0);
     width: 350px;
     height: 300px;
     background-color: var(--bg-1);
     transition: 1s all;
-    animation: Checkmark 1.5s;
+    animation: Checkmark 1s;
+}
+
+.animation__container > h1 {
+    position: absolute;
+    top: 62%;
+    right: 50%;
+    font-size: 3rem;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    transform: translate(50%, -50%);
+    color: var(--accent-magenta);
+}
+
+.animation__container > h2 {
+    width: 100%;
+    position: absolute;
+    top: 75%;
+    right: 50%;
+    font-size: 2rem;
+    text-align: center;
+    transform: translateX(50%);
+    color: var(--accent-magenta);
+}
+
+.email__received__cover {
+    position: absolute;
+    top: 55%;
+    right: 1%;
+    transform: translate(50%, -50%);
+    width: 95%;
+    height: 100px;
+    background-color: var(--bg-1);
+    transform: scale(0);
+    transition: 1s all;
+    animation: Confirmation 2s cubic-bezier(0, 0.3, 0.5, 1);
+}
+
+.response__time__cover {
+    position: absolute;
+    top: 75%;
+    right: 3%;
+    transform: translate(50%, -50%);
+    width: 92%;
+    height: 140px;
+    background-color: var(--bg-1);
+    transform: scale(0);
+    transition: 1s all;
+    animation: Confirmation 2.5s cubic-bezier(0, 0.3, 0.5, 1);
 }
 
 @keyframes Checkmark {
-    0% { transform: scale(1); width: 300px; }
-    25% { transform: scale(1); width: 200px; }
+    0% { transform: scale(1); width: 350px; }
+    35% { transform: scale(1); width: 200px; }
     100% { transform: scale(1); width: 0px; }
 }
 
+@keyframes Confirmation {
+    0% { transform: scale(1); width: 95%; }
+    50% { transform: scale(1); width: 95%; }
+    100% { transform: scale(1); width: 0%; }
+}
+
+@media (max-width: 550px) {
+    .contact__header {
+        font-size: 3rem;
+    }
+    
+    .animation__container > h1 {
+        font-size: 2rem;
+    }
+
+    .animation__container > h2 {
+        font-size: 1.5rem;
+    }
+
+    .checkmark {
+        width: 250px;
+    }
+}

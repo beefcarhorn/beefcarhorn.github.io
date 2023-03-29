@@ -15,6 +15,7 @@ a:link {
 .intro__right {
     flex: 0.5;
     position: relative;
+    margin: 40px 0px;
 }
 
 .image__container {
@@ -62,32 +63,6 @@ a:link {
     color: var(--accent-magenta);
 }
 
-.intro__a {
-    position: absolute;
-    bottom: 10px;
-    left: 20%;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.to__about {
-    color: var(--white);
-    font-size: 2rem;
-    font-weight: 300;
-    margin-bottom: 8px;
-    animation: Blink 2s infinite;
-}
-
-.down__arrow {
-    color: var(--white);
-    margin-bottom: 40px;
-    transform: scale(500%);
-    animation: Blink 2s infinite;
-}
-
 @keyframes Blink {
     0%, 100% {
         opacity: 0.6;
@@ -95,5 +70,23 @@ a:link {
 
     50% {
         opacity: 0.9;
+    }
+}
+
+@media (max-width: 550px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro__h1 {
+        font-size: 3.25rem;
+    }
+    
+    .intro__h2 {
+        font-size: 2rem;
+    }
+    
+    .intro__h3 {
+        font-size: 1.3rem;
     }
 }
