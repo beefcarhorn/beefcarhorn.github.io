@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import './aboutMe.css'
 import Tilt from 'react-parallax-tilt'
 
 function AboutMe() {
+
+  const myRef = useRef()
+  const [isVisible, setIsVisible] = useState(false)
+  console.log(isVisible)
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0]
+      setIsVisible(entry.isIntersecting)
+    })
+    observer.observe(myRef.current)
+  }, [])
+
+
   return (
     <div className='AboutMe' id='AboutMe'>
-      <h1 className='about__header'>About</h1>
+      <h1 ref={myRef} className='about__header'>About</h1>
         <div className='main__width'>
           <Tilt className="freetime__container" tiltAxis='y' tiltMaxAngleY={5} glareEnable={true} glareColor='#ffffff' glarePosition='all' glareBorderRadius='100' glareMaxOpacity={0.05}>
             <img className='friends' src='./assets/friends.png' alt="" />
