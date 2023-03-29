@@ -29,7 +29,7 @@ function Contact() {
   return (
     <div className='contact' id='contact'>
       <h1 className='contact__header'>Contact Me</h1>
-      <form className="message__container" ref={form} onSubmit={e => { {/*sendEmail(e);*/} handleSubmit(e); }}>
+      <form className="message__container" ref={form} onSubmit={e => { sendEmail(e); handleSubmit(e); }}>
         <h3 className='message__header'>New Message</h3>
         <input type="text" name="user_name" placeholder='Name' />
         <div className="divider"></div>

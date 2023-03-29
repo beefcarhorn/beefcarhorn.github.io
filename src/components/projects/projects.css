@@ -81,8 +81,7 @@
 
 .answer__input {
     position: relative;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin: 30px 0px 20px;
     height: 45px;
     font-size: 1.3rem;
     width: 150px;
