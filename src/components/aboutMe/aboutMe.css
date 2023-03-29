@@ -20,10 +20,19 @@
 .about__header {
     position: relative;
     font-size: 4rem;
-    margin: 30px 0px;
-    margin-right: 65px;
+    margin-top: 30px;
+    margin-right: 60px;
     color: var(--white);
     rotate: -5deg;
+}
+
+.about__header__underline {
+    height: 5px;
+    width: 200px;
+    margin-bottom: 30px;
+    margin-right: 55px;
+    background-color: var(--white);
+    rotate: var(--bg-skew-angle);
 }
 
 .main__width {
@@ -91,6 +100,27 @@
 
 .travel__image, .art__image {
     margin-bottom: 30px;
+}
+
+.about__anim { animation: HeaderFade 1.25s var(--fade-in); }
+
+.free__anim { animation: aboutFade 0.5s var(--fade-in); }
+
+.travel__anim { animation: aboutFade 1.25s var(--fade-in); }
+
+.art__anim { animation: aboutFade 2s var(--fade-in); }
+
+@keyframes aboutFade {
+    0% {
+        display: flex;
+        transform: translateX(75px);
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 710px) {

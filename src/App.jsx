@@ -4,7 +4,6 @@ import { Navbar, Menu, Intro, AboutMe, Skills, Projects, Organizations, Contact 
 
 function App() {
 
-  
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
