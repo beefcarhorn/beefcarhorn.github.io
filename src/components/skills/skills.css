@@ -8,6 +8,7 @@
 .header__container {
     margin-top: 40px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -17,6 +18,20 @@
     width: 100%;
     text-align: center;
     font-size: 4rem;
+}
+
+.skills__header__underline {
+    height: 5px;
+    width: 100%;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: 1s ease;
+    background-color: var(--white);
+}
+
+.skills__visible {
+    opacity: 1;
+    transform: scaleX(1);
 }
 
 .skills__grid {
@@ -31,6 +46,8 @@
 
 .skills__container {
     text-align: center;
+    opacity: 0;
+    transform: translateX(-50px);
 }
 
 .skills__container > h2 {
@@ -55,6 +72,19 @@
 
 .js {
     width: 50px;
+}
+
+.react__container { transition: 800ms ease; }
+
+.js__container { transition: 800ms ease; }
+
+.c__container { transition: 800ms ease; }
+
+.py__container { transition: 800ms ease; }
+
+.react__anim, .js__anim, .c__anim, .py__anim {
+    opacity: 1;
+    transform: translateX(0px);
 }
 
 @media (max-width: 1000px) {
