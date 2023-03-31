@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './projects.css'
 import { countryArr } from './countryArray'
-import Tilt from 'react-parallax-tilt'
+import { useInView } from 'react-intersection-observer';
+import './projects.css'
 
 var img = countryArr[Math.floor(Math.random() * countryArr.length)]
 const countryProps = { img: img }
@@ -33,12 +33,16 @@ const Projects = () => {
     }
   }
 
+  const { ref: projectsRef, inView: projectsVisible } = useInView()
+  const { ref: countryRef, inView: countryVisible } = useInView()
+
   return (
     <div className='projects' id='projects'>
       <h1 className='projects__header'>Projects</h1>
-      <Tilt className='projects__country' tiltAxis='y' tiltMaxAngleY={1} glareEnable={true} glareColor='#313b60' glarePosition='all' glareBorderRadius='100' glareMaxOpacity={0.2}>
+      <div ref={projectsRef} className={`projects__header__underline ${projectsVisible ? 'projects__visible' : ''}`}></div>
+      <div ref={countryRef} className={`projects__country ${countryVisible ? 'country__visible' : ''}`}>
         <div className='country__desc'>
-          <h2 className='country__header'>CountryGuessr</h2>
+          <h2 ref={projectsRef} className='country__header'>CountryGuessr</h2>
           <h4 className='country__howto'>Guess the name of a random country or territory!</h4>
           <div className='country__specs'>
             <img className='country__js' src='assets/js.png' alt='JavaScript'></img>
@@ -56,7 +60,7 @@ const Projects = () => {
                                            onMouseUp={() => { animate('mouseUp'); setDownAnim(false) }} 
                                            onMouseLeave={() => setDownAnim(false)}>Skip</button>
         </div>
-      </Tilt>
+      </div>
     </div>
   )
 }

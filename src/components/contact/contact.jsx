@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react'
+import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser'
-import './contact.css'
 import Modal from 'react-modal'
+import './contact.css'
 
 function Contact() {
 
@@ -26,10 +27,13 @@ function Contact() {
       });
   };
 
+  const { ref: contactRef, inView: contactVisible } = useInView()
+
   return (
     <div className='contact' id='contact'>
       <h1 className='contact__header'>Contact Me</h1>
-      <form className="message__container" ref={form} onSubmit={e => { sendEmail(e); handleSubmit(e); }}>
+      <div ref={contactRef} className={`contact__header__underline ${contactVisible ? 'contact__visible' : ''}`}></div>
+      <form ref={form} className={`message__container`} onSubmit={e => { sendEmail(e); handleSubmit(e); }}>
         <h3 className='message__header'>New Message</h3>
         <input type="text" name="user_name" placeholder='Name' />
         <div className="divider"></div>

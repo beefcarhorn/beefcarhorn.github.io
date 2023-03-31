@@ -1,8 +1,31 @@
 .projects {
-    background-color: var(--bg-2);
+    position: relative;
+    background: var(--gradient-1);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding-top: 75px;
+    padding-bottom: 150px;
+}
+
+.projects::before, .projects::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: var(--bg-1);
+    mask-image: url('../../../public/assets/triangle.svg');
+    mask-size: 100px 50px;
+}
+
+.projects::before {
+    top: 0;
+}
+
+.projects::after {
+    bottom: 0;
+    transform: rotate(0.5turn) translateY(-1px);
 }
 
 .projects__header {
@@ -12,15 +35,38 @@
     padding-top: 40px;
 }
 
+.projects__header__underline {
+    height: 5px;
+    width: 250px;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: 500ms ease;
+    background-color: var(--white);
+}
+
+.projects__visible {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
 .projects__country {
     position: relative;
     width: 90vw;
     max-width: 1000px;
     display: grid;
     grid-template-rows: 1fr 3fr;
-    margin: 50px 0px 60px;
+    border-radius: 10px;
+    margin-top: 50px;
     padding: 35px;
-    border: 3px solid var(--white);
+    background-color: var(--bg-2);
+    opacity: 0;
+    transform: translateX(150px);
+    transition: 750ms ease;
+}
+
+.country__visible {
+    opacity: 1;
+    transform: translateX(0px);
 }
 
 .country__desc > h2 {

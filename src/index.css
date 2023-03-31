@@ -22,6 +22,7 @@
   --scrollbar-hover: rgba(87, 102, 134, 0.6);
   --scrollbar-track: rgb(41, 58, 83);
   --gradient-1: linear-gradient(45deg, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
+  --gradient-2: linear-gradient(rgb(253, 200, 48), rgb(243, 115, 53));
 
   --contact-padding: 15px 20px;
   --bg-skew-angle: -5deg;

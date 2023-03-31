@@ -5,6 +5,7 @@ a:link {
 .intro {
     background-color: var(--bg-1);
     display: flex;
+    padding: 40px 0px;
 }
 
 .intro__left {

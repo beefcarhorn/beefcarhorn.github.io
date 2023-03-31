@@ -1,15 +1,43 @@
 .contact {
-    background-color: var(--bg-2);
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 40px;
     color: var(--white);
+    background: var(--gradient-1);
 }
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--bg-1);
+    mask-image: url('../../../public/assets/triangle.svg');
+}
+
 
 .contact__header {
     font-size: 4rem;
-    padding: 40px 0px;
+    margin-top: 40px;
+}
+
+.contact__header__underline {
+    height: 5px;
+    width: 350px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: scaleX(0);
+    background-color: var(--white);
+    transition: 750ms ease;
+}
+
+.contact__visible {
+    opacity: 1;
+    transform: scaleX(1);
 }
 
 .message__container {
@@ -33,6 +61,7 @@
     font-weight: 500;
     padding: var(--contact-padding);
 }
+
 
 .message__container > input {
     margin: 10px 18px;

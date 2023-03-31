@@ -35,7 +35,7 @@
     transform: scaleX(0);
     background-color: var(--white);
     rotate: var(--bg-skew-angle);
-    transition: 1s ease;
+    transition: 500ms ease;
 }
 
 .about__anim {
@@ -115,9 +115,9 @@
 
 .free__anim { animation: aboutFade 1s var(--fade-in); }
 
-.travel__anim { animation: aboutFade 1.15s var(--fade-in); }
+.travel__anim { animation: aboutFade 1.3s var(--fade-in); }
 
-.art__anim { animation: aboutFade 1.3s var(--fade-in); }
+.art__anim { animation: aboutFade 1.6s var(--fade-in); }
 
 @keyframes aboutFade {
     0% {

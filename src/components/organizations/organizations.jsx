@@ -1,13 +1,19 @@
 import React from 'react'
+import { useInView } from 'react-intersection-observer';
 import './organizations.css'
-import Tilt from 'react-parallax-tilt'
 
 const Organizations = () => {
+  
+  const { ref: orgsRef, inView: orgsVisible } = useInView()
+  const { ref: ieeeRef, inView: ieeeVisible } = useInView()
+  const { ref: ecessRef, inView: ecessVisible } = useInView()
+
   return (
     <div className='organizations' id='organizations'>
       <h1 className='organizations__header'>Organizations</h1>
+      <div ref={orgsRef} className={`organizations__header__underline ${orgsVisible ? 'orgs__visible' : ''}`}></div>
       <div className="organizations__container">
-        <Tilt className="ieee" tiltAxis='y' tiltMaxAngleY={2}>
+        <div ref={ieeeRef} className={`ieee ${ieeeVisible ? 'ieee__visible' : ''}`}>
           <a href='https://purdueieee.org/' target='_blank' rel='noopener noreferrer'>
             <img className='ieee__logo' src="assets/ieee.png" alt="IEEE" />
           </a>
@@ -23,8 +29,8 @@ const Organizations = () => {
                 router connection. The players will be able to play online games such as Tron, Snake, and chess.
             </h3>
           </li>
-        </Tilt>
-        <Tilt className="ecess" tiltAxis='y' tiltMaxAngleY={2}>
+        </div>
+        <div ref={ecessRef} className={`ecess ${ecessVisible ? 'ecess__visible' : ''}`}>
           <a href='https://www.purdue-ecess.org/' target='_blank' rel='noopener noreferrer'>
             <img className='ecess__logo' src="assets/ecess.png" alt="ECESS" />
           </a>
@@ -36,7 +42,7 @@ const Organizations = () => {
               I am currently taking it upon myself to update the landing page to introducing more modern UI components and allow
               for easier navigation for new, aspiring members. I then plan to modernize pages of ECESS subteams after the landing page.
           </h3>
-        </Tilt>
+        </div>
       </div>
     </div>
   )
