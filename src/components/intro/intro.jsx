@@ -13,7 +13,7 @@ function Intro() {
       <div className="intro__right">
         <div className="intro__right__container">
           <h2 className='intro__h2'>Hi there, I'm</h2>
-          <h1 className='intro__h1'>Aidan Poor</h1>
+          <h1 className='intro__h1'>Aidan</h1>
           <h3 className='intro__h3'>I'm a
             <span className='intro__jobs'>
               <Typewriter loop cursor cursorStyle="|" 

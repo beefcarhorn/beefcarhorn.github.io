@@ -6,7 +6,8 @@
     background-color: var(--bg-1);
     color: var(--white);
     text-align: center;
-    padding-top: 40px;
+    padding-top: 100px;
+    margin-bottom: 50px;
 }
 
 .organizations__header {
@@ -113,6 +114,10 @@
 @media (max-width: 550px) {
     .organizations__header {
         font-size: 3rem;
+    }
+
+    .organizations__header__underline {
+        width: 325px;
     }
 
     .ieee, .ecess {

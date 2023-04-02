@@ -10,7 +10,7 @@
 .AboutMe::after {
     content: '';
     background-image: var(--gradient-1);
-    box-shadow: 0px 0px 200px 10px var(--faded-black);
+    box-shadow: 0px 0px 200px 80px var(--faded-black);
     position: absolute;
     inset: 0;
     transform: skewY(var(--bg-skew-angle));
@@ -58,7 +58,6 @@
     align-items: center;
     padding: 30px;
     margin: 0px 30px 50px 30px;
-    padding-bottom: 0px;
     border-radius: 10px;
     background-color: var(--bg-3);
     transition: 250ms ease-out;
@@ -85,8 +84,30 @@
     text-align: center;
     font-size: 1.2rem;
     font-weight: 400;
-    margin-bottom: 40px;
     color: var(--white);
+}
+
+.art__desc {
+    margin-bottom: 0px;
+}
+
+.gallery__button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    outline: none;
+    border: 1px solid var(--faded-white-3);
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--bg-2);
+    transition: all 75ms ease;
+}
+
+.gallery__button:hover {
+    border: 2px solid var(--white);
+    background-color: var(--bg-1);
 }
 
 .friends {
@@ -121,7 +142,6 @@
 
 @keyframes aboutFade {
     0% {
-        transition: transform ease-in-out;
         transform: translateX(100px);
         opacity: 0;
     }
@@ -139,8 +159,11 @@
 
 @media (max-width: 710px) {
     .main__width { flex-direction: column; }
+
     .about__header { margin-right: 0; }
+
     .main__width, .about__header { rotate: 0deg; }
+
     .about__header__underline { 
         margin-right: 0;
         transform: skewY(calc(var(--bg-skew-angle) * -1)); 
@@ -149,4 +172,13 @@
 
 @media (max-width: 550px) {
     .about__header { font-size: 3rem; }
+    
+    .about__header__underline { 
+        width: 0px;
+        transition: 500ms ease; 
+    }
+
+    .about__anim {
+        width: 150px;;
+    }
 }

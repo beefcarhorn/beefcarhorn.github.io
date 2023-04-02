@@ -2,8 +2,8 @@
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
 
-  --main-color: rgb(20, 27, 49);
-  --main-color-active: rgb(19, 24, 41);
+  --main-color: rgb(10, 15, 29);
+  --main-color-active: rgb(8, 11, 21);
   --bg-1: rgb(26, 32, 54);
   --bg-2: rgb(30, 38, 65);
   --bg-3: rgb(48, 56, 90);
@@ -11,6 +11,9 @@
   --bg-5: rgb(58, 67, 106);
   --bg-6: rgb(40, 49, 78);
   --white: white;
+  --black: black;
+  --forest-green: rgb(2, 15, 13);
+  --lime-green: rgb(159, 209, 159);
   --faded-white: rgba(255, 255, 255, 0.05);
   --faded-white-hover: rgba(255, 255, 255, 0.15);
   --faded-white-2: rgba(255, 255, 255, 0.25);
@@ -18,9 +21,9 @@
   --faded-black: rgba(0, 0, 0, 0.6);
   --white-active: rgb(147, 147, 147);
   --accent-magenta: rgb(171, 110, 179);
-  --scrollbar: rgba(81, 104, 152, 0.4);
-  --scrollbar-hover: rgba(87, 102, 134, 0.6);
-  --scrollbar-track: rgb(41, 58, 83);
+  --scrollbar: rgba(189, 189, 189, 0.4);
+  --scrollbar-hover: rgba(179, 179, 179, 0.6);
+  --scrollbar-track: rgb(16, 44, 59);
   --gradient-1: linear-gradient(45deg, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
   --gradient-2: linear-gradient(rgb(253, 200, 48), rgb(243, 115, 53));
 
@@ -72,7 +75,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--white);
-  -webkit-box-shadow: 0px 0px 0px 100px var(--bg-6) inset;
+  -webkit-box-shadow: 0px 0px 0px 100px var(--bg-1) inset;
   transition: background-color 500ms ease-in-out 0s;
 }
 

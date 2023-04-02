@@ -31,6 +31,7 @@ function Contact() {
 
   return (
     <div className='contact' id='contact'>
+      <div className="shadow"></div>
       <h1 className='contact__header'>Contact Me</h1>
       <div ref={contactRef} className={`contact__header__underline ${contactVisible ? 'contact__visible' : ''}`}></div>
       <form ref={form} className={`message__container`} onSubmit={e => { sendEmail(e); handleSubmit(e); }}>

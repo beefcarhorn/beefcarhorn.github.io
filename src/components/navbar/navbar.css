@@ -5,14 +5,13 @@
     position: fixed;
     background-color: var(--main-color);
     color: var(--white);
-    z-index: 3;
+    z-index: 4;
     transition: 300ms ease;
 }
 
 .nav__container {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
 }
 
 .logo__container {
@@ -28,7 +27,56 @@
 .logo__desc {
     font-size: 2em;
     font-weight: 300;
-    width: 300px
+    border-right: 2px solid var(--white);
+    padding-right: 20px;
+}
+
+.nav__menu__list {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav__menu__list > a {
+    margin-right: 20px;
+    font-size: 1.3rem;
+    transition: 75ms ease;
+    color: var(--white);
+}
+
+.nav__menu__list > a:hover {
+    color: var(--accent-magenta);
+}
+
+.nav__icon__container {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+}
+
+.github {
+    width: 40px;
+    margin-right: 15px;
+    filter: invert() brightness(75%);
+    transition: 75ms ease;
+}
+
+.github:hover {
+    filter: invert() brightness(100%);
+}
+
+.linkedin {
+    width: 40px;
+    filter: grayscale() brightness(175%);
+    transition: 75ms ease;
+}
+
+.linkedin:hover {
+    filter: grayscale() brightness(200);
+}
+
+.hamburger > * {
+    display: none;
 }
 
 .hamburger {
@@ -40,7 +88,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    cursor: pointer;
 }
 
 .right__span {
@@ -57,4 +104,19 @@
 
 .ham__active {
     background-color: var(--white-active);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.revert__color {
+    background-color: var(--main-color);
+}
+
+@media (max-width: 980px) {
+    .logo__desc { border-right: transparent; }
+    .nav__menu__list { display: none; }
+    .hamburger > * { display: block; }
+    .nav__icon__container { margin-right: 60px; }
 }
