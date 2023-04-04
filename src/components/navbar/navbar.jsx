@@ -3,22 +3,16 @@ import './navbar.css'
 
 function Navbar({ menuOpen, setMenuOpen }) {
 
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ]);
+  const [windowSize, setWindowSize] = useState([ window.innerWidth, window.innerHeight ])
 
   useEffect(() => {
     const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
+      setWindowSize([window.innerWidth, window.innerHeight])
+    }
 
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  });
+    window.addEventListener('resize', handleWindowResize)
+    return () => { window.removeEventListener('resize', handleWindowResize) }
+  })
 
   return (
     <div className={`navbar ${windowSize[0] > 980 ? 'revert__color' : ''}  ${menuOpen && 'active'}`}>

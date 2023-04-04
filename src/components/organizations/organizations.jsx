@@ -4,9 +4,9 @@ import './organizations.css'
 
 const Organizations = () => {
   
-  const { ref: orgsRef, inView: orgsVisible } = useInView()
-  const { ref: ieeeRef, inView: ieeeVisible } = useInView()
-  const { ref: ecessRef, inView: ecessVisible } = useInView()
+  const { ref: orgsRef, inView: orgsVisible } = useInView({ triggerOnce: true })
+  const { ref: ieeeRef, inView: ieeeVisible } = useInView({ triggerOnce: true })
+  const { ref: ecessRef, inView: ecessVisible } = useInView({ triggerOnce: true })
 
   return (
     <div className='organizations' id='organizations'>

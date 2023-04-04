@@ -6,7 +6,7 @@ import './gallery.css'
 
 const Gallery = () => {
   
-  const { ref: galleryBgRef, inView: galleryBgVisible } = useInView({ threshold: 0.5 })
+  const { ref: galleryBgRef, inView: galleryBgVisible } = useInView()
   const { ref: galleryTitleRef } = useInView({ triggerOnce: true })
   const { ref: galleryHeaderUnderlineRef} = useInView({ triggerOnce: true })
   const { ref: galleryHeaderDescRef, inView: galleryHeaderDescVisible } = useInView({ triggerOnce: true })

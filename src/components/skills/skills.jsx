@@ -4,11 +4,11 @@ import './skills.css'
 
 function Skills() {
 
-  const { ref: skillsRef, inView: skillsVisible } = useInView()
-  const { ref: reactRef, inView: reactVisible } = useInView()
-  const { ref: jsRef, inView: jsVisible } = useInView()
-  const { ref: cRef, inView: cVisible } = useInView()
-  const { ref: pyRef, inView: pyVisible } = useInView()
+  const { ref: skillsRef, inView: skillsVisible } = useInView({ triggerOnce: true })
+  const { ref: reactRef, inView: reactVisible } = useInView({ triggerOnce: true })
+  const { ref: jsRef, inView: jsVisible } = useInView({ triggerOnce: true })
+  const { ref: cRef, inView: cVisible } = useInView({ triggerOnce: true })
+  const { ref: pyRef, inView: pyVisible } = useInView({ triggerOnce: true })
 
   return (
     <div className='skills' id='skills'>
@@ -25,7 +25,7 @@ function Skills() {
         <div ref={jsRef} className={`skills__container js__container  ${jsVisible ? 'js__anim' : '' }`}>
           <img className='js' src="assets/js.png" alt="" />
           <h2>JavaScript</h2>
-          <li>TypeScript, ES6, CommonJS</li>
+          <li>TypeScript, ES6, ExpressJS, CommonJS</li>
         </div>
         <div ref={cRef} className={`skills__container c__container ${cVisible ? 'c__anim' : '' }`}>
           <img src="assets/C.png" alt="" />

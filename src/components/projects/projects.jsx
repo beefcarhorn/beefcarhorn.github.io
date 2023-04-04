@@ -7,7 +7,6 @@ var img = countryArr[Math.floor(Math.random() * countryArr.length)]
 const countryProps = { img: img, prevImg: img }
 
 const updateCountry = () => {
-  // countryProps.prevImg = countryProps.img
   while ((img = countryArr[Math.floor(Math.random() * countryArr.length)]) !== countryProps.img)
   countryProps.img = img
 }
@@ -56,15 +55,14 @@ const Projects = () => {
     }
   }
 
-  const { ref: projectsRef, inView: projectsVisible } = useInView()
-  const { ref: countryRef, inView: countryVisible } = useInView()
+  const { ref: projectsRef, inView: projectsVisible } = useInView({ triggerOnce: true })
 
   return (
     <div className='projects' id='projects'>
       <div className="shadow__top"></div>
       <h1 className='projects__header'>Projects</h1>
       <div ref={projectsRef} className={`projects__header__underline ${projectsVisible ? 'projects__visible' : ''}`}></div>
-      <div ref={countryRef} className={`projects__country ${countryVisible ? '' : ''}`}>
+      <div className='projects__country'>
         <div className='country__desc'>
           <h2 ref={projectsRef} className='country__header'>CountryGuessr</h2>
           <h4 className='country__howto'>Guess the name of a random country or territory!</h4>

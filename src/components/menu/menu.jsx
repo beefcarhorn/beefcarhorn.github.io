@@ -3,24 +3,18 @@ import './menu.css'
 
 const Menu = ({ menuOpen, setMenuOpen }) => {
 
-    const [windowSize, setWindowSize] = useState([
-        window.innerWidth,
-        window.innerHeight,
-      ]);
+  const [windowSize, setWindowSize] = useState([ window.innerWidth, window.innerHeight ])
     
-      useEffect(() => {
-        const handleWindowResize = () => {
-          setWindowSize([window.innerWidth, window.innerHeight]);
-        };
-    
-        window.addEventListener('resize', handleWindowResize);
-    
-        return () => {
-          window.removeEventListener('resize', handleWindowResize);
-        };
-      });
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight])
+    }
 
-      if (windowSize[0] > 980) { setMenuOpen(false) }
+    window.addEventListener('resize', handleWindowResize)
+    return () => { window.removeEventListener('resize', handleWindowResize) }
+  })
+
+  if (windowSize[0] > 980) { setMenuOpen(false) }
 
   return (
     <div className={`menu  ${windowSize[0] > 980 ? 'invisible' : ''} ${menuOpen && 'menu__active'}`}>

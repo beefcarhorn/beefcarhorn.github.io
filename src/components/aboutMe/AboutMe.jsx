@@ -5,10 +5,10 @@ import './aboutMe.css'
 
 function AboutMe() {
 
-  const { ref: aboutRef, inView: aboutVisible } = useInView()
-  const { ref: freeRef, inView: freeVisible } = useInView()
-  const { ref: travelRef, inView: travelVisible } = useInView()
-  const { ref: artRef, inView: artVisible } = useInView()
+  const { ref: aboutRef, inView: aboutVisible } = useInView({ triggerOnce: true })
+  const { ref: freeRef, inView: freeVisible } = useInView({ triggerOnce: true })
+  const { ref: travelRef, inView: travelVisible } = useInView({ triggerOnce: true })
+  const { ref: artRef, inView: artVisible } = useInView({ triggerOnce: true })
 
   const nav = useNavigate()
   

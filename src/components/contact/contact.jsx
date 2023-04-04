@@ -1,33 +1,43 @@
-import React, { useState, useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser'
 import Modal from 'react-modal'
+import axios from 'axios'
 import './contact.css'
 
 function Contact() {
 
   const [openModal, setOpenModal] = useState(false)
+  const [data, setData] = useState(null)
+  const form = useRef();
+
+  useEffect(() => {
+    const options = { method: 'GET', url: 'http://localhost:8000/mail' }
+    axios.request(options).then((res) => {
+      setData(res.data)
+    }).catch((err) => {
+      console.log(err);
+    })
+  }, [])
+
   const handleSubmit = (e) => { 
     e.preventDefault()
     setOpenModal(!openModal)
-   }
-
-  const form = useRef();
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_i3ju5ig', 'template_bxj47oj', form.current, '1Szx3w0IWaXE-XfsC')
-      .then((result) => {
-          console.log(result.text);
-          console.log('msg sent')
-          e.target.reset();
-      }, (error) => {
-          console.log(error.text);
-      });
-  };
+    emailjs.sendForm(data.serviceId, data.templateId, form.current, data.key)
+      .then((res) => {
+          console.log(res.text)
+          e.target.reset()
+      }, (err) => {
+          console.log(err.text)
+      })
+  }
 
-  const { ref: contactRef, inView: contactVisible } = useInView()
+  const { ref: contactRef, inView: contactVisible } = useInView({ triggerOnce: true })
 
   return (
     <div className='contact' id='contact'>
