@@ -22,7 +22,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
           <h2 className='logo__desc'>Aidan</h2>
         </div>
         <ul className='nav__menu__list'>
-          <a href="#intro">Home</a>
+          <a href="beefcarhorn.github.io/intro">Home</a>
           <a href="#AboutMe">About Me</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
