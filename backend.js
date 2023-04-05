@@ -7,6 +7,9 @@ require('dotenv').config()
 
 const app = express()
 app.use(cors())
+app.get('/', (req, res) => {
+    res.json('hello')
+})
 app.get('/mail', (req, res) => {
     var serviceId = process.env.REACT_APP_SERVICE_ID
     var templateId = process.env.REACT_APP_TEMPLATE_ID

@@ -39,7 +39,7 @@ const Organizations = () => {
           </h3>
           <h2>Web Development Team</h2>
           <h3>Since I have joined the Web Development team, the ECESS website has not been updated since 2021.
-              I am currently taking it upon myself to update the landing page to introducing more modern UI components and allow
+              I am currently taking it upon myself to update the landing page to introducing more modern UI/UX components and allow
               for easier navigation for new, aspiring members. I then plan to modernize pages of ECESS subteams after the landing page.
           </h3>
         </div>

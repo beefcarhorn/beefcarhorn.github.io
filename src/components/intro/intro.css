@@ -20,6 +20,7 @@ a:link {
 }
 
 .image__container {
+    position: relative;
     width: 700px;
     height: 700px;
     background-color: var(--accent-magenta);
@@ -31,7 +32,9 @@ a:link {
 }
 
 .me {
-    height: 90%;
+    position: absolute;
+    width: 1900px;
+    bottom: -900px;
 }
 
 .intro__right__container {

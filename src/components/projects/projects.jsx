@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { countryArr } from './countryArray'
 import { useInView } from 'react-intersection-observer';
+import { isCorrect } from './isCorrect'
 import './projects.css'
 
 var img = countryArr[Math.floor(Math.random() * countryArr.length)]
@@ -26,7 +27,7 @@ const revealedAnswer = (str) => {
 }
 
 const Projects = () => {
-  const [input, setInput] =  useState()
+  const [input, setInput] =  useState('')
   const [country, setCountry] = useState(`assets/countries/${countryProps.img}`)
   const [downAnim, setDownAnim] = useState(false)
   const [upAnim, setUpAnim] = useState(false)
@@ -41,18 +42,19 @@ const Projects = () => {
       setReveal(true)
       setScore(0) 
     }
-
     updateCountry()
     setCountry(`assets/countries/${countryProps.img}`)
     setInput('')
   }
 
-  const keyDownHandler = (event) => {
-    if (event.key === 'Enter' && `${input}.png`.toLowerCase() === countryProps.img.toLowerCase()) {
-      setReveal(false)
-      setScore(score + 1)
-      nextCountry()
-    }
+  const checkGuess = (event) => {
+    console.log('entered checkGuess')
+    if (event.key !== 'Enter') { return }
+    console.log('key == enter')
+    if (!isCorrect(`${input}.png`.toLowerCase().replace('.png', ''), countryProps.img.toLowerCase().replace('.png', ''))) { return }
+    setReveal(false)
+    setScore(score + 1)
+    nextCountry()
   }
 
   const { ref: projectsRef, inView: projectsVisible } = useInView({ triggerOnce: true })
@@ -74,7 +76,7 @@ const Projects = () => {
         </div>
         <div className='answer__container'>
           <img src={country} alt='Country'></img>
-          <input className='answer__input' type="text" value={input} placeholder='Enter Guess' onChange={handleChange} onKeyDown={keyDownHandler} />
+          <input className='answer__input' type="text" value={input} placeholder='Enter Guess' onChange={handleChange} onKeyDown={checkGuess} />
           <div className="country__data__container">
             <button className={`answer__skip ${ downAnim ? 'down__anim' : null } 
                                            ${ upAnim ? 'up__anim' : null }`} 
