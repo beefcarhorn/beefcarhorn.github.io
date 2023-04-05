@@ -15,7 +15,6 @@ function Contact() {
     const options = { method: 'GET', url: 'http://localhost:8000/mail' }
     axios.request(options).then((res) => {
       setData(res.data)
-      console.log(data)
     }).catch((err) => {
       console.log(err);
     })
