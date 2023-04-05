@@ -160,7 +160,7 @@
 .gallery__card > img {
     border-radius: 10px;
     opacity: 1;
-    transition: 300ms ease;
+    transition: 800ms ease;
     max-width: 1000px;
     width: 70vw;
     min-width: 400px;
@@ -169,6 +169,7 @@
 
 .gallery__card > img:hover {
     opacity: 0.75;
+    transform: scale(1.02);
 }
 
 .card__title {

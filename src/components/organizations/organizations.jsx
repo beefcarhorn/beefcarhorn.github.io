@@ -1,19 +1,15 @@
 import React from 'react'
-import { useInView } from 'react-intersection-observer';
 import './organizations.css'
 
 const Organizations = () => {
-  
-  const { ref: orgsRef, inView: orgsVisible } = useInView({ triggerOnce: true })
-  const { ref: ieeeRef, inView: ieeeVisible } = useInView({ triggerOnce: true })
-  const { ref: ecessRef, inView: ecessVisible } = useInView({ triggerOnce: true })
+
 
   return (
     <div className='organizations' id='organizations'>
       <h1 className='organizations__header'>Organizations</h1>
-      <div ref={orgsRef} className={`organizations__header__underline ${orgsVisible ? 'orgs__visible' : ''}`}></div>
+      <div className='organizations__header__underline'></div>
       <div className="organizations__container">
-        <div ref={ieeeRef} className={`ieee ${ieeeVisible ? 'ieee__visible' : ''}`}>
+        <div className='ieee'>
           <a href='https://purdueieee.org/' target='_blank' rel='noopener noreferrer'>
             <img className='ieee__logo' src="assets/ieee.png" alt="IEEE" />
           </a>
@@ -30,7 +26,7 @@ const Organizations = () => {
             </h3>
           </li>
         </div>
-        <div ref={ecessRef} className={`ecess ${ecessVisible ? 'ecess__visible' : ''}`}>
+        <div className='ecess'>
           <a href='https://www.purdue-ecess.org/' target='_blank' rel='noopener noreferrer'>
             <img className='ecess__logo' src="assets/ecess.png" alt="ECESS" />
           </a>

@@ -1,8 +1,8 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { default as App } from './App'
 import { default as Gallery } from './components/gallery/Gallery.jsx'
 
-export const router = createHashRouter([
+export const router = createBrowserRouter([
     {
       path: "/",
       element: <App />,

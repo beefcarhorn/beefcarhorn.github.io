@@ -46,16 +46,6 @@
     transition: 500ms ease;
 }
 
-.ieee {
-    opacity: 0;
-    transform: translateX(-150px);
-}
-
-.ieee__visible {
-    opacity: 1;
-    transform: translateX(0px);
-}
-
 .ieee__logo {
     width: 300px;
     filter: brightness(80%);
@@ -85,16 +75,6 @@
 
 .ieee__logo:hover, .ecess__logo:hover {
     filter: brightness(100%);
-}
-
-.ecess {
-    opacity: 0;
-    transform: translateX(150px);
-}
-
-.ecess__visible {
-    opacity: 1;
-    transform: translateX(0px);
 }
 
 .ecess__logo {

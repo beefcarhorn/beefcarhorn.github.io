@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { countryArr } from './countryArray'
-import { useInView } from 'react-intersection-observer';
 import { isCorrect } from './isCorrect'
 import './projects.css'
 
@@ -57,16 +56,14 @@ const Projects = () => {
     nextCountry()
   }
 
-  const { ref: projectsRef, inView: projectsVisible } = useInView({ triggerOnce: true })
-
   return (
     <div className='projects' id='projects'>
       <div className="shadow__top"></div>
       <h1 className='projects__header'>Projects</h1>
-      <div ref={projectsRef} className={`projects__header__underline ${projectsVisible ? 'projects__visible' : ''}`}></div>
+      <div className='projects__header__underline'></div>
       <div className='projects__country'>
         <div className='country__desc'>
-          <h2 ref={projectsRef} className='country__header'>CountryGuessr</h2>
+          <h2 className='country__header'>CountryGuessr</h2>
           <h4 className='country__howto'>Guess the name of a random country or territory!</h4>
           <div className='country__specs'>
             <img className='country__js' src='assets/js.png' alt='JavaScript'></img>

@@ -12,7 +12,7 @@ function App() {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="sections">
         <Intro />
-        <AboutMe className='diagonal' />
+        <AboutMe />
         <Skills />
         <Projects />
         <Organizations />

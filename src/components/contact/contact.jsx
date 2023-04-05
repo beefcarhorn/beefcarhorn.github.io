@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser'
 import Modal from 'react-modal'
 import axios from 'axios'
@@ -37,13 +36,11 @@ function Contact() {
       })
   }
 
-  const { ref: contactRef, inView: contactVisible } = useInView({ triggerOnce: true })
-
   return (
     <div className='contact' id='contact'>
       <div className="shadow"></div>
       <h1 className='contact__header'>Contact Me</h1>
-      <div ref={contactRef} className={`contact__header__underline ${contactVisible ? 'contact__visible' : ''}`}></div>
+      <div className='contact__header__underline'></div>
       <form ref={form} className={`message__container`} onSubmit={e => { sendEmail(e); handleSubmit(e); }}>
         <h3 className='message__header'>New Message</h3>
         <input type="text" name="user_name" placeholder='Name' />
