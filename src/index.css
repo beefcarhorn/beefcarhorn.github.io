@@ -46,14 +46,19 @@ img {
 
 ::-webkit-scrollbar {
   background-color: transparent;
+  z-index: 10;
 }
 
 ::-webkit-scrollbar-track {
   background-color: var(--scrollbar-track);
+  z-index: 10;
+
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar);
+  z-index: 10;
+
 }
 
 ::-webkit-scrollbar-thumb:hover {

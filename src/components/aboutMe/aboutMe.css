@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 100px 0px;
+    margin-bottom: 100px;
+    margin-top: -100px;
 }
 
 .AboutMe::after {
@@ -132,53 +133,4 @@
 
 .travel__image, .art__image {
     margin-bottom: 30px;
-}
-
-.free__anim { animation: aboutFade 1s var(--fade-in); }
-
-.travel__anim { animation: aboutFade 1.3s var(--fade-in); }
-
-.art__anim { animation: aboutFade 1.6s var(--fade-in); }
-
-@keyframes aboutFade {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-
-    20% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-@media (max-width: 710px) {
-    .main__width { flex-direction: column; }
-
-    .about__header { margin-right: 0; }
-
-    .main__width, .about__header { rotate: 0deg; }
-
-    .about__header__underline { 
-        margin-right: 0;
-        transform: skewY(calc(var(--bg-skew-angle) * -1)); 
-    }
-}
-
-@media (max-width: 550px) {
-    .about__header { font-size: 3rem; }
-    
-    .about__header__underline { 
-        width: 0px;
-        transition: 500ms ease; 
-    }
-
-    .about__anim {
-        width: 150px;;
-    }
 }
