@@ -100,6 +100,8 @@
         flex-direction: column;
         align-items: center;
     }
+
+
 }
 
 @media (max-width: 650px) {
@@ -113,7 +115,12 @@
 
     .contact__email {
         height: 230px;
+        width: 90vw;
         margin-bottom: 20px;
+    }
+
+    .contact__email > h2 {
+        font-size: 1.4rem;
     }
 
     .media__container > div {
