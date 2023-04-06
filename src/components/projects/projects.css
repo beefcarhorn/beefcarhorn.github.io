@@ -95,6 +95,12 @@
     border: 2px solid white;
 }
 
+@media (max-width: 700px) {
+    .projects__country > h1 {
+        font-size: 1.7rem;
+    }
+}
+
 @media (max-width: 550px) {
     .projects__header {
         font-size: 3rem;
