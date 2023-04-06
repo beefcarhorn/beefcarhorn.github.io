@@ -29,261 +29,95 @@
 
 .contact__header {
     font-size: 4rem;
-    margin-top: 40px;
+    margin: 40px 0px;
 }
 
-.contact__header__underline {
-    height: 5px;
-    width: 350px;
-    margin-bottom: 40px;
-    opacity: 0;
-    transform: scaleX(0);
-    background-color: var(--white);
-    transition: 750ms ease;
+.contact__container {
+    display: flex;
 }
 
-.contact__visible {
-    opacity: 1;
-    transform: scaleX(1);
-}
-
-.message__container {
+.contact__container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    width: 80vw;
-    max-width: 650px;
-    margin-bottom: 80px;
-    border-radius: 10px;
-    background-color: var(--bg-2);
 }
 
-.message__header {
-    padding: var(--contact-padding);
-    border-radius: 10px 10px 0px 0px;
-    background-color: var(--bg-3);
-}
-
-.message__container > h3 {
-    font-weight: 500;
-    padding: var(--contact-padding);
-}
-
-
-.message__container > input {
-    margin: 10px 18px;
-    padding: 10px;
-    font-size: 1.2rem;
-    border: none;
-    outline: none;
-    background-color: var(--bg-2);
-    color: var(--white);
-}
-
-.message__container > textarea {
-    height: 300px;
-    margin: 10px 18px;
-    font-size: 1.2rem;
-    resize: none;
-    border: none;
-    outline: none;
-    background-color: var(--bg-2);
-    color: var(--white);
-}
-
-.message__container > button {
-    width: 100px;
-    height: 40px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    margin: 15px;
-    color: var(--white);
-    background-color: var(--accent-magenta);
-    transition: 100ms ease;
-}
-
-.message__container > button:hover {
-    filter: brightness(105%);
-    box-shadow: 0px 0px 3px var(--accent-magenta);
-}
-
-.divider {
-    width: 70vw;
-    max-width: 605px;
-    height: 1px;
-    margin: auto;
-    background-color: var(--bg-5);
-}
-
-.message__author > input {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    font-size: 1.2rem;
-    outline: none;
-    color: var(--white);
-}
-
-.message__actions {
+.media__container {
     display: flex;
     align-items: center;
-    padding: var(--contact-padding);
+    justify-content: space-around;
+    column-gap: 50px;
 }
 
-.contact__modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 400px;
-    width: 80vw;
-    height: 600px;
-    padding: 20px;
-    border-radius: 30px;
-    outline: none;
-    background-color: var(--bg-1);
+.media__container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-bottom: 80px;
+    background-color: var(--bg-2);
 }
 
-.contact__modal > button {
-    position: absolute;
-    padding: 0;
-    top: -5px;
-    right: 20px;
-    height: 0px;
-    font-size: 4rem;
-    color: var(--white);
-    border: none;
-    background-color: transparent;
-    transition: 200ms ease;
-    z-index: 4;
-}
-
-.contact__modal > button:hover {
-    color: var(--accent-magenta);
-    scale: 1.1;
-    transform: translateY(-3px);
-}
-
-.ReactModal__Overlay {
-    width: 100%;
-    height: 100%;
-    background-color: var(--faded-black) !important;
-    z-index: 4;
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
-}
-
-.ReactModal__Overlay--after-open{
-    opacity: 1;
-}
-
-.ReactModal__Overlay--before-close{
-    opacity: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 30%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    width: 300px;
-}
-
-.checkmark__cover {
-    position: absolute;
-    top: 0%;
-    right: 13%;
-    transform: translate(50%, 50%);
-    transform: scale(0);
-    width: 350px;
-    height: 300px;
-    background-color: var(--bg-1);
-    transition: 1s all;
-    animation: Checkmark 1s;
-}
-
-.animation__container > h1 {
-    position: absolute;
-    top: 62%;
-    right: 50%;
+.media__container > div > h3, .contact__container > div > h3 {
     font-size: 3rem;
-    white-space: nowrap;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    transform: translate(50%, -50%);
-    color: var(--accent-magenta);
+    margin-bottom: 15px;
 }
 
-.animation__container > h2 {
-    width: 100%;
-    position: absolute;
-    top: 75%;
-    right: 50%;
+.contact__email {
+    max-width: 550px;
+    width: 90vw;
+    background-color: var(--bg-2);
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-bottom: 50px;
+    background-color: var(--bg-2);
+}
+
+.contact__github, .contact__linkedIn {
+    width: 250px;
+}
+
+.contact__email > h2 {
     font-size: 2rem;
-    text-align: center;
-    transform: translateX(50%);
-    color: var(--accent-magenta);
 }
 
-.email__received__cover {
-    position: absolute;
-    top: 55%;
-    right: 1%;
-    transform: translate(50%, -50%);
-    width: 95%;
-    height: 100px;
-    background-color: var(--bg-1);
-    transform: scale(0);
-    transition: 1s all;
-    animation: Confirmation 2s cubic-bezier(0, 0.3, 0.5, 1);
+.github__logo {
+    width: 100px;
 }
 
-.response__time__cover {
-    position: absolute;
-    top: 75%;
-    right: 3%;
-    transform: translate(50%, -50%);
-    width: 92%;
-    height: 140px;
-    background-color: var(--bg-1);
-    transform: scale(0);
-    transition: 1s all;
-    animation: Confirmation 2.5s cubic-bezier(0, 0.3, 0.5, 1);
+.linkedIn__logo {
+    width: 100px;
 }
 
-@keyframes Checkmark {
-    0% { transform: scale(1); width: 350px; }
-    35% { transform: scale(1); width: 200px; }
-    100% { transform: scale(1); width: 0px; }
+.copyright {
+    margin-bottom: 10px;
 }
 
-@keyframes Confirmation {
-    0% { transform: scale(1); width: 95%; }
-    50% { transform: scale(1); width: 95%; }
-    100% { transform: scale(1); width: 0%; }
+@media (max-width: 900px) {
+    .contact__container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
     .contact__header {
         font-size: 3rem;
     }
-    
-    .animation__container > h1 {
-        font-size: 2rem;
+
+    .media__container {
+        flex-direction: column;
     }
 
-    .animation__container > h2 {
-        font-size: 1.5rem;
+    .contact__email {
+        height: 230px;
+        margin-bottom: 20px;
     }
 
-    .checkmark {
-        width: 250px;
-    }
-
-    .contact__header__underline {
-        width: 265px;
+    .media__container > div {
+        width: 90vw;
+        margin-bottom: 20px;
     }
 }

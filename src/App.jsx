@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import './App.css'
 import { Navbar, Menu, Intro, AboutMe, Skills, Projects, Organizations, Contact } from './components'
 
