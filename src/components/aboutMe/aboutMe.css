@@ -134,3 +134,15 @@
 .travel__image, .art__image {
     margin-bottom: 30px;
 }
+
+@media (max-width: 710px) {
+    .main__width { flex-direction: column; }
+
+    .about__header { margin-right: 0; }
+
+    .main__width, .about__header { rotate: 0deg; }
+}
+
+@media (max-width: 550px) {
+    .about__header { font-size: 3rem; }
+}

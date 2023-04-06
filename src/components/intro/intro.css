@@ -61,6 +61,7 @@ a:link {
     .me2 {
         max-width: 750px;
         width: 120vw;
+        margin-top: 50px;
     }
 
     .intro {
