@@ -102,3 +102,9 @@
 .revert__color {
     background-color: var(--main-color);
 }
+
+@media (max-width: 700px) {
+    .navbar__email {
+        font-size: 0.9rem;
+    }
+}
