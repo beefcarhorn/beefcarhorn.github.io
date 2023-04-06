@@ -8,7 +8,9 @@ const Projects = () => {
       <h1 className='projects__header'>Projects</h1>
       <div className='projects__header__underline'></div>
       <div className='projects__country'>
-        <video className='country__guessr' src="assets/countryGuessr.mp4" muted={true} 
+        <h1>CountryGuessr</h1>
+        <h2>Guess the name of the country!</h2>
+        <video className='country__guessr' src="assets/test.mp4" muted={true} 
                                                                           controls={true} 
                                                                           autoPlay={true} 
                                                                           loop={true} 
